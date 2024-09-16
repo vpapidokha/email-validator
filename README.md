@@ -11,5 +11,5 @@ go run cmd/cli/main.go
 
 To use:
 ``` bash
-curl -X POST "http://localhost:8080/validate-email" -H "Content-Type: application/json" --data '{"email": "test-email@gmail.com"'
+curl -X POST "http://localhost:8080/validate-email" -H "Content-Type: application/json" --data '{"email": "test-email@gmail.com"}'
 ```
