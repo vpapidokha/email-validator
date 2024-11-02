@@ -1,15 +1,9 @@
-To run you need to setup two env variables:
+To run app:
 ``` bash
-export SMTP_HOST_NAME="smtp.gmail.com"
-export SMTP_MAIL_ADDRESS="example@gmail.com"
-```
-
-After that:
-``` bash
-go run cmd/cli/main.go
+go run main.go serve
 ```
 
 To use:
 ``` bash
-curl -X POST "http://localhost:8080/validate-email" -H "Content-Type: application/json" --data '{"email": "test-email@gmail.com"}'
+curl -X POST "http://localhost:8080/api/validate-email" -H "Content-Type: application/json" --data '{"email": "test-email@gmail.com"}'
 ```
