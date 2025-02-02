@@ -11,13 +11,13 @@ func ValidateEmail(email Email) (*emailverifier.SMTP, error) {
 	verifier := emailverifier.NewVerifier().EnableSMTPCheck()
 	splitEmail := verifier.ParseAddress(email.Email)
 
-	ret, err := verifier.CheckSMTP(splitEmail.Domain, splitEmail.Username)
+	result, err := verifier.CheckSMTP(splitEmail.Domain, splitEmail.Username)
 	if err != nil {
 		fmt.Println("verify email address failed, error is: ", err)
-		return ret, err
+		return result, err
 	}
 
-	log.Print("email validation result", ret)
+	log.Print("email validation result", result)
 
-	return ret, nil
+	return result, nil
 }
